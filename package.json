@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "eslint .",
     "start": "nodemon app.js",
-    "test": "mocha tests/**Tests.js"
+    "test": "mocha tests/**Tests.js",
+    "seed": "mongo booksapi-prod <booksJson.js",
+    "drop": "mongo booksapi-prod --eval \"db.dropDatabase()\""
   },
   "author": "",
   "license": "ISC",

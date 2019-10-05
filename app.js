@@ -5,10 +5,10 @@ const bodyParser = require('body-parser');
 const app = express();
 if (process.env.ENV === 'Test') {
   console.log('Creating test db connection...');
-  const db = mongoose.connect('mongodb://localhost:27017/booksapi_test', { useNewUrlParser: true, useUnifiedTopology: true });
+  const db = mongoose.connect('mongodb://localhost/booksapi-test', { useNewUrlParser: true, useUnifiedTopology: true });
 } else {
   console.log('Creating production db connection...');
-  const db = mongoose.connect('mongodb://localhost:27017/booksapi_prod', { useNewUrlParser: true, useUnifiedTopology: true });
+  const db = mongoose.connect('mongodb://localhost/booksapi-prod', { useNewUrlParser: true, useUnifiedTopology: true });
 }
 
 const port = process.env.PORT || 3000;

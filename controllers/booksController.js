@@ -19,7 +19,13 @@ const booksController = (Book) => {
       if (err) {
         return res.send(err);
       }
-      return res.json(books);
+      const booksResult = books.map((book) => {
+        const bookResult = book.toJSON();
+        bookResult.links = {};
+        bookResult.links.self = `http://${req.headers.host}/api/books/${book._id}`;
+        return bookResult;
+      });
+      return res.json(booksResult);
     });
   };
 

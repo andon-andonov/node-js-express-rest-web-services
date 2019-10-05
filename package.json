@@ -22,7 +22,8 @@
     "mocha": "^6.2.1",
     "nodemon": "^1.19.2",
     "should": "^13.2.3",
-    "sinon": "^7.5.0"
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
   },
   "nodemonConfig": {
     "restartable": "rs",
